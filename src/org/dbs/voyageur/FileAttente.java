@@ -1,4 +1,4 @@
-package org.dbs;
+package org.dbs.voyageur;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
