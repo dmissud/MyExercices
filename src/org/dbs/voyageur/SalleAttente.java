@@ -15,7 +15,8 @@ public class SalleAttente {
     }
 
     public void appelVoyageur() {
-        for (Voyageur voyageur : queue) {
+        while (!queue.isEmpty()) {
+            Voyageur voyageur = queue.remove();
             System.out.println(voyageur);
         }
     }
