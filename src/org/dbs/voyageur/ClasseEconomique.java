@@ -1,6 +1,6 @@
 package org.dbs.voyageur;
 
-public enum Classe {
+public enum ClasseEconomique {
     Premiere,
     Business,
     Economique

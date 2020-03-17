@@ -3,11 +3,11 @@ package org.dbs.voyageur;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class FileAttente {
+public class SalleAttente {
     Queue<Voyageur> queue;
 
-    public FileAttente() {
-        this.queue = new PriorityQueue<>(new VoyageurComparateur());
+    public SalleAttente() {
+        this.queue = new PriorityQueue<>();
     }
 
     public void enregistre(Voyageur wVoy) {
