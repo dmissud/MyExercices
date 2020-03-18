@@ -34,7 +34,8 @@ public class Texte {
             lines.add("w:" + stringIntegerEntry.getKey() + " found " + stringIntegerEntry.getValue());
         }
         lines.add("Nombre de ligne(s) : " + this.nbLine);
-        lines.add("Nombre de mot(s) : " + this.nbWords);
+        lines.add("Nombre de mot(s) : " + this.dico.keySet().size());
+        lines.add("Nombre de mot(s) dans le texte : " + this.nbWords);
         lines.add("Mot(s) populaires : "+ this.bigOne+ " "+this.lstPopWorld);
         Path desc = Paths.get(path.getParent()+"\\ana_"+path.getFileName());
         try {
@@ -43,7 +44,8 @@ public class Texte {
             e.printStackTrace();
         }
         System.out.println("Nombre de ligne(s) : " + this.nbLine);
-        System.out.println("Nombre de mot(s) : " + this.nbWords);
+        System.out.println("Nombre de mot(s) : " + this.dico.keySet().size());
+        System.out.println("Nombre de mot(s) dans le texte : " + this.nbWords);
         System.out.println("Mot(s) populaires : "+ this.bigOne+ " "+this.lstPopWorld);
     }
 
@@ -98,7 +100,7 @@ public class Texte {
     }
 
     private void doAnalyseLine(String line) {
-        String delimiters = "\\\"|:\\.|\\,|,+|[-_\u2026\u201c\u00ab*\u00bb()!%\u00a3$/&;?\u2013\u2009\u00AD\\[\\]]|[0-9][0-9]h[0-9][0-9]|[0-9]+";
+        String delimiters = "\\\"|\\:|\\.|\\,|\\s+|[-_«*»()!%£$/&;?…“– \\[\\]]|[0-9][0-9]h[0-9][0-9]|[0-9]+";
         String[] words = line.split(delimiters);
         for (String word : words) {
             addDico(word.toLowerCase());
