@@ -3,10 +3,10 @@ package org.dbs.voyageur;
 import java.util.Objects;
 
 public class Voyageur implements Comparable<Voyageur> {
-    private String nom;
-    private int numero;
-    private int siege;
-    private ClasseEconomique classeEconomique;
+    private final String nom;
+    private final int numero;
+    private final int siege;
+    private final ClasseEconomique classeEconomique;
 
     public Voyageur(String nom, int numero, int siege, ClasseEconomique classeEconomique) {
         this.nom = nom;

@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class SalleAttente {
-    Queue<Voyageur> queue;
+    final Queue<Voyageur> queue;
 
     public SalleAttente() {
         this.queue = new PriorityQueue<>();
